@@ -3,7 +3,7 @@
       <div class="content">
         <h1>Tentang Kami</h1>
         <p>
-          Dompetku adalah aplikasi pengelolaan keuangan pribadi yang dirancang untuk membantu Anda mencatat dan mengatur pengeluaran serta pemasukan dengan mudah dan efektif. 
+          Dompetku adalah aplikasi pengelolaan keuangan pribadi yang dirancang untuk membantu Anda mencatat dan mengatur pengeluaran serta pemasukan dengan mudah dan efektif.
         </p>
   
         <div class="values">
@@ -39,10 +39,12 @@
     text-align: center;
     background-color: #f9f9f9;
     color: #333;
+    min-height: 100vh;
   }
   
   .content {
-    max-width: 800px;
+    max-width: 900px;
+    padding: 1.5rem;
   }
   
   h1 {
@@ -52,8 +54,8 @@
   }
   
   p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.7;
     margin-bottom: 1.5rem;
   }
   
@@ -61,35 +63,50 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
   
   .value-item {
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   }
   
   .value-item h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #333;
     margin-bottom: 0.5rem;
   }
   
   .value-item p {
     font-size: 1rem;
-    color: #666;
+    color: #555;
+  }
+  
+  @media (min-width: 768px) {
+    .values {
+      flex-direction: row;
+    }
   }
   
   @media (min-width: 1024px) {
-    .about {
-      min-height: 100vh;
-      padding: 4rem;
+    h1 {
+      font-size: 3rem;
     }
   
-    .values {
-      flex-direction: row;
+    .value-item h2 {
+      font-size: 1.8rem;
+    }
+  
+    .value-item p {
+      font-size: 1.1rem;
     }
   }
   </style>
